@@ -30,4 +30,36 @@ const AddTodoMutation = gql`
   }
 `;
 
-export { getOwnerQuery, getTodoQuery, AddTodoMutation };
+const DeleteTodoMutation = gql`
+  mutation deleteTodo($id: ID!) {
+    deleteTodo(id: $id) {
+      text
+    }
+  }
+`;
+
+const AddOwnerMutation = gql`
+  mutation addOwner($name: String!) {
+    addOwner(name: $name) {
+      name
+      id
+    }
+  }
+`;
+
+const DeleteOwnerMutation = gql`
+  mutation deleteOwner($id: ID!) {
+    deleteOwner(id: $id) {
+      name
+    }
+  }
+`;
+
+export {
+  getOwnerQuery,
+  getTodoQuery,
+  AddTodoMutation,
+  DeleteTodoMutation,
+  AddOwnerMutation,
+  DeleteOwnerMutation
+};

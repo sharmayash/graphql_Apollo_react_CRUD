@@ -17,7 +17,7 @@ function AddTodo() {
   };
 
   return (
-    <form onSubmit={submitForm.bind(this)} id="add-book">
+    <form onSubmit={submitForm.bind(this)}>
       <div className="field">
         <label>Todo Text</label>
         <input type="text" onChange={e => setText(e.target.value)} />
@@ -35,7 +35,7 @@ function AddTodo() {
           })}
         </select>
       </div>
-      <button>+</button>
+      <button>ADD New Todo</button>
     </form>
   );
 }
